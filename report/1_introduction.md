@@ -1,6 +1,6 @@
 # Introduction
 
-J’ai fait le choix de m’orienter en CMI ISR (Cursus Master Ingénierie en Informatique, Systèmes et Réseaux) à l’université de Strasbourg en partie pour la proximité avec le monde de l’entreprise, avec un certain nombre de stages à effectuer. Cela permet d’acquérir de nombreuses connaissances supplémentaires ainsi qu’une véritable expérience professionnelle, qui ne pourra que m’être bénéfique pour ma carrière professionnelle.
+J’ai fait le choix de m’orienter en CMI ISR (Cursus Master Ingénierie en Informatique, Systèmes et Réseaux) à l’université de Strasbourg en partie pour la proximité avec le monde de l’entreprise, avec un certain nombre de stages à effectuer. Cela permet d’acquérir de nombreuses connaissances supplémentaires ainsi qu’une véritable expérience, qui ne pourront que m’être bénéfiques pour ma carrière professionnelle.
 
 
 
