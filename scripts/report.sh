@@ -13,7 +13,7 @@ cat "${DIR}cover.tex" \
 # create a pdf file for the thanks page
 pandoc \
   -V fontsize=12pt \
-  -V geometry:left=4cm,right=4cm,top=8cm,bottom=.5cm \
+  -V geometry:left=3cm,right=3cm,top=3cm,bottom=3cm \
   "${DIR}remerciements.md" -o .report-thx.pdf
 
 # get the content of the report
@@ -25,7 +25,8 @@ done
 echo "${CONTENT}\n\n\listoffigures\n" \
   | sed 's/\.\.\/images\//\.\/images\//g' \
   | pandoc --toc -o .report-content.pdf \
-    -V lang=fr -V fontsize=12pt -V documentclass=report
+    -V lang=fr -V fontsize=12pt -V documentclass=report \
+    -V geometry:left=3cm,right=3cm,top=3cm,bottom=3cm \
 
 # merge all needed pdf files
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dAutoRotatePages=/None \
