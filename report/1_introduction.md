@@ -2,7 +2,7 @@
 
 Le Cursus Master Ingénierie en Informatique, Systèmes et Réseaux (CMI ISR) à l’université de Strasbourg favorise la proximité avec le monde de l’entreprise, avec un minimum de quatre stages à effectuer.
 Cela permet d’acquérir de nombreuses connaissances supplémentaires ainsi qu’une véritable expérience, qui ne pourront que m’être bénéfiques pour ma carrière professionnelle.
-C'est ce qui m'a fait choisir cette fillière.
+C'est ce qui m'a fait choisir cette filière.
 
 Ce stage de spécialisation a été réalisé du 3 juin au 30 août 2019 dans le cadre de ma quatrième année de CMI.
 Il m'a permis d'approfondir nettement mes compétences dans l'infrastructure numérique, en particulier sur Kubernetes, un orchestrateur de conteneurs qui m'intéresse fortement.

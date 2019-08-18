@@ -32,7 +32,7 @@ J'ai donc exploré ces différentes solutions afin de voir celle qui pourrait co
 
 Il existe de nombreuses manières de déployer une grappe Kubernetes.
 
-La première catégorie, est celle permettant d'avoir rapidement une grappe composée d'un seul nœud en local.
+La première catégorie est celle permettant d'avoir rapidement une grappe composée d'un seul nœud en local.
 J'ai pu tester Docker Desktop^[<https://www.docker.com/products/docker-desktop>], qui permet de lancer une grappe d'un simple clic sur Mac ou Windows.
 `Minikube`^[<https://kubernetes.io/docs/setup/learning-environment/minikube/>] est une alternative, qui à l'avantage de tourner sur Linux également.
 Cela est pratique dans le but de se familiariser avec les fichiers de configuration ainsi que les différents outils pour gérer une grappe Kubernetes.
@@ -40,21 +40,21 @@ Parmi ces outils on retrouve notamment `kubectl` qui permet de gérer une grappe
 Cependant, ces solutions ne sont pas faites pour de la production, étant donné que l'on n'a qu'un seul nœud et que l'on n'est donc pas en mesure d'assurer une haute disponibilité.
 Si ce nœud tombe, l'ensemble des services sera indisponible, ce qui n'est pas envisageable.
 
-La seconde est celle qui contient des outils pour déployer une grappe Kubernetes, tout en pouvant choisir finnement ce que l'on souhaite y intégrer comme composants.
+La deuxième contient des outils pour déployer une grappe Kubernetes, tout en pouvant choisir finement ce que l'on souhaite y intégrer comme composants.
 J'ai eu l'occasion de tester `kubeadm`^[<https://kubernetes.io/fr/docs/setup/independent/create-cluster-kubeadm/>] et Kubespray^[<https://github.com/kubernetes-sigs/kubespray>].
 Ce dernier permet d'utiliser Ansible^[<https://www.ansible.com/>], une plateforme pour la configuration et gestion de machines, pour déployer une grappe.
 L'avantage est qu'il est possible de versionner la configuration utilisée, mais elle reste toutefois complexe à mettre en œuvre.
 
-La dernière est celle qui permet de déployer rapidement une grappe de production, en intégrant des fonctionnalités supplémentaires.
+La dernière permet de déployer rapidement une grappe de production, en intégrant des fonctionnalités supplémentaires.
 Certains choix sont donc fait à notre place, mais on perd en complexité.
 Dans cette catégorie on retrouve des offres portées par les principaux fournisseurs d'infrastructures numériques, comme GKE par Google, EKS par Amazon, AKS par Microsoft, des offres de DigitalOcean, IBM et OVH.
 On y trouve également des projets comme Rancher dans sa seconde version, qui permettent de gérer plusieurs grappes, que ce soit celles gérées par des fournisseurs ou des grappes locales.
 Je l'ai donc testé pour déployer des grappes locales et distantes chez Google et Amazon.
 Un aspect positif est qu'en terme d'interface et de terminologie il y a un certain nombre de similitudes par rapport à la version actuellement utilisée en production pour la gestion de l'infrastructure.
 Le fait de pouvoir gérer depuis une même interface les différentes grappes est un point pratique pour les besoins de l'équipe IT.
-Rancher offre un certain nombre d'abstractions et permet de déployer des éléments naturellement complexes, telle que la mise en place d'un mécanisme de surveillance et d'alertes à propos de l'état de santé de la grappe en elle-même ainsi que des conteneurs, et ce de manière simple et rapide, avec une configuration pertinente et directement fonctionnelle.
+Rancher offre un certain nombre d'abstractions et permet de déployer des éléments naturellement complexes, tels des mécanismes de surveillance et d'alertes à propos de l'état de santé de la grappe en elle-même ainsi que des conteneurs, et ce de manière simple et rapide, avec une configuration pertinente et directement fonctionnelle.
 Il est d'ailleurs relativement aisé de mettre à jour l'ensemble, ce qui devrait faciliter la maintenance du service sur le long terme.
-Cependant la documentation du projet peut s'avérer parfois incomplète, notamment en ce qui concerne le mécanisme interne des abstractions proposées ou des droits requis pour faire tourner une grappe Kubernetes chez Amazon avec les permissions minimales, mais l'ensemble se révèle plutôt satisfaisant sinon.
+Cependant la documentation du projet peut s'avérer parfois incomplète, notamment en ce qui concerne le mécanisme interne des abstractions proposées ou des droits requis pour faire tourner une grappe Kubernetes chez Amazon avec les permissions minimales, mais à part ça l'ensemble se révèle plutôt satisfaisant.
 
 J'ai donc proposé d'utiliser Rancher pour la gestion des différentes grappes Kubernetes, choix qui a été validé par l'équipe.
 
@@ -93,7 +93,7 @@ On a donc fait le choix d'utiliser CephFS pour les grappes internes.
 
 ### Mécanisme de surveillance et d'alerte
 
-Rancher offre la possibilité de déployer un mécanisme de surveillance et d'alerte reposant sur Prometheus, Alert-manager et Grafana rapidement.
+Rancher offre la possibilité de déployer rapidement un mécanisme de surveillance et d'alerte reposant sur Prometheus, Alert-manager et Grafana.
 
 Un certain nombre de métriques sont déjà configurées par défaut, telles que le taux d'utilisation de processeur, de mémoire et de l'état de santé général de la grappe, mais il est toutefois possible d'exposer des métriques supplémentaires par des applications déployées.
 
@@ -102,17 +102,17 @@ Un certain nombre de métriques sont déjà configurées par défaut, telles que
 Ces métriques peuvent être utilisées pour déclencher des alertes.
 On peut imaginer par exemple déclencher l'envoi de notifications si jamais la grappe utilise trop de ressources ou n'est pas en bonne santé.
 
-![Exemple d'alerte reçue sur Slack, suite à un composant en mauvaise santé](./images/screen/alert.png)
+![Exemple d'alerte reçue sur Slack suite à un composant en mauvaise santé](./images/screen/alert.png)
 
 On peut également exploiter ces métriques pour faire de la mise à l'échelle automatique.
 
 ### Autres points d'attention
 
-La majorité des services qui ont vocation à être déployés sur les différentes grappes Kubernetes sont des services accessibles via HTTP ou HTTPS.
+La majorité des services qui ont vocation à être déployés sur les différentes grappes Kubernetes sont accessibles via HTTP ou HTTPS.
 Un point important a donc été de voir comment router le trafic au bon service en fonction de l'adresse utilisée et d'analyser les solutions principales.
 
 La sécurité est également un point important.
-J'ai notamment étudié la manière dont les certificats SSL/TLS pour les connexions en HTTPS et peuvent être gérés et comment mettre en place une solution pour chiffrer les échanges entre les différents services s'exécutant au sein de la grappe.
+J'ai notamment étudié la manière dont les certificats SSL/TLS pour les connexions en HTTPS peuvent être gérés et comment mettre en place une solution pour chiffrer les échanges entre les différents services s'exécutant au sein de la grappe.
 
 L'intégration et le déploiement continu d'applications sont bénéfiques du moment où l'ensemble est bien configuré.
 En effet à chaque fois que du code est poussé sur un dépôt `git`, cela va lancer des jeux de tests, de construction d'images et de déploiement de l'application sur une grappe précise.
