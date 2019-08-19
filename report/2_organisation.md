@@ -17,7 +17,7 @@ Ses produits principaux concernent l'automatisation et la validation de visuels 
 
 On y trouve par exemple ES [@dalim_es], son produit phare, un outil de gestion de traitement et validation de documents numériques.
 Il permet d'ajouter des annotations, versionner les différents documents de travail, les inspecter, les éditer et les faire valider par différentes équipes.
-Ces documents peuvent être des visuels, des fichiers PDF, des sites web ou des emballages tri-dimentionnels.
+Ces documents peuvent être des visuels, des fichiers PDF, des sites web ou des emballages tridimensionnels.
 
 On retrouve également Twist [@dalim_twist], un moteur de traitement de flux de fichiers.
 On peut y définir de manière graphique les différentes étapes de traitement des documents : analyses, conversions, stockage, renommages.

@@ -21,7 +21,7 @@ En effet avec l'infrastructure actuelle, il était difficile de déboguer une ap
 
 Il n'est également pas possible de faire de la mise à l'échelle automatique, notamment en fonction de la charge, tout comme il est impossible de déployer un conteneur automatiquement sur la machine ayant le plus de ressources disponibles.
 
-L'équipe a donc pensé qu'utiliser Kubernetes pouvait être une solution qui serait en mesure de palier ces problèmes et d'offrir une architecture plus actuelle et standard, qui puisse être déployée rapidement n'importe où, d'où l'intérêt de mon stage.
+L'équipe a donc pensé qu'utiliser Kubernetes pouvait être une solution qui serait en mesure de pallier ces problèmes et d'offrir une architecture plus actuelle et standard, qui puisse être déployée rapidement n'importe où, d'où l'intérêt de mon stage.
 
 J'ai donc fait le tour de tout ce que pouvait offrir Kubernetes pour voir s'il s'agissait d'une solution pertinente pour Dalim Software, ce qui s'est révélé l'être étant donné que Kubernetes était en mesure de répondre à chacun des problèmes énumérés.
 
@@ -46,7 +46,7 @@ Ce dernier permet d'utiliser Ansible [@ansible], une plateforme pour la configur
 L'avantage est qu'il est possible de versionner la configuration utilisée, mais elle reste toutefois complexe à mettre en œuvre.
 
 La dernière permet de déployer rapidement une grappe de production, en intégrant des fonctionnalités supplémentaires.
-Certains choix sont donc fait à notre place, mais on perd en complexité.
+Certains choix sont donc faits à notre place, mais on perd en complexité.
 Dans cette catégorie on retrouve des offres portées par les principaux fournisseurs d'infrastructures numériques, comme GKE par Google [@gke], EKS par Amazon [@eks], AKS par Microsoft, des offres de DigitalOcean, IBM et OVH.
 
 On y trouve également des projets comme Rancher [@rancher] dans sa seconde version, qui permettent de gérer plusieurs grappes, que ce soit celles gérées par des fournisseurs ou des grappes locales.
@@ -94,7 +94,7 @@ J'ai comparé avec les performances avec la solution actuellement déployée, en
 
 On peut constater sur la table \ref{table_eval_storage} que dans les configurations évaluées NFS offre de meilleures performances que GlusterFS, excepté pour les fermetures, où elles sont cinq fois plus importantes.
 Ceph offre de bien meilleurs résultats en termes de latences que les deux autres solutions.
-Il permet aussi un stockage distribué à travers les différents nœuds de la grappes pour permettre un stockage sans point unique de défaillance.
+Il permet aussi un stockage distribué à travers les différents nœuds de la grappe pour permettre un stockage sans point unique de défaillance.
 Cependant on peut constater que la médiane diffère grandement de la moyenne, on doit donc s'attendre à avoir une grande variance, mais les performances sont quand-même excellentes.
 
 On a donc fait le choix d'utiliser CephFS pour les grappes internes.
@@ -136,7 +136,7 @@ J'ai également pris le temps de rajouter des tests de santé d'application pour
 En effet, en souhaitant s'orienter vers une offre de logiciels en tant que services, les développeurs doivent être en accord sur la philosophie à adopter, dans le but d'avancer ensemble dans une même direction.
 
 Ma présentation consistait dans un premier temps à expliquer le principe des conteneurs, leur utilité et comment créer des images.
-J'ai ensuite introduit un certain nombre de concepts de Kubernetes, sans spécialement entrer dans le technique, dans le but de donner une vue d'ensemble des possibilités offertes par un orchestrateur de conteneurs et fournir un aperçu des problèmes auxquels il répond.
+J'ai ensuite introduit un certain nombre de concepts de Kubernetes, sans spécialement entrer dans l'aspect technique, dans le but de donner une vue d'ensemble des possibilités offertes par un orchestrateur de conteneurs et fournir un aperçu des problèmes auxquels il répond.
 
 En amont, j'ai pu discuter avec Thierry Rolland, le responsable du développement, afin de voir quelles seraient les aspects de Kubernetes qui pourraient leur être le plus utile, et orienter ma présentation en fonction.
 Il en est ressorti que la capacité à lancer de nouvelles instances de services de traitement en fonction de la taille d'une file d'attente, avec la possibilité de borner le nombre de ces instances, leur serait très utile.
@@ -229,7 +229,7 @@ La figure \ref{fig_cal} montre la vue que l'on peut obtenir sur cette interface.
 
 #### Le traitement des données
 
-Concernant la partie du traitement des données transmises par les logiciels, elle était originellement rédigée en PHP 5. Or cette version n'est plus maintenue^[D'après <https://www.php.net/supported-versions.php>, la dernière version de la branche 5 a arrêtée de recevoir de nouvelles fonctionnalitées depuis début 2017 et plus aucun correctif de sécurité n'y est appliqué depuis début 2019. Plus aucune correction ne sera donc effectuée, continuer à utiliser cette version représente un risque de sécurité.].
+Concernant la partie du traitement des données transmises par les logiciels, elle était originellement rédigée en PHP 5. Or cette version n'est plus maintenue^[D'après <https://www.php.net/supported-versions.php>, la dernière version de la branche 5 a arrêtée de recevoir de nouvelles fonctionnalités depuis début 2017 et plus aucun correctif de sécurité n'y est appliqué depuis début 2019. Plus aucune correction ne sera donc effectuée, continuer à utiliser cette version représente un risque de sécurité.].
 
 J'ai donc fait en sorte de nettoyer l'ensemble du code pour le rendre compatible avec les dernières versions de PHP, en corrigeant au passage un bon nombre de failles, principalement des possibilités d'injection SQL.
 
@@ -243,7 +243,7 @@ Pour faciliter le déploiement, j'ai conteneurisé l'ensemble de l'application e
 
 Dans un premier temps, j'ai créé une machine virtuelle, dans laquelle je n'avais qu'à les lancer avec `docker-compose`, ce qui a permis de faire valider l'ensemble.
 
-Ensuite, j'ai rédigé la configuration nécessaire pour déployer l'application sur une grappe Kubernetes, qui va être très prochainnement passé en production.
+Ensuite, j'ai rédigé la configuration nécessaire pour déployer l'application sur une grappe Kubernetes, qui va être très prochainement passé en production.
 
 ## Autres tâches
 

@@ -1,6 +1,6 @@
 # Conclusion
 
-Kubernetes répond parfaitement aux besoins de l'entreprise dans le mesure où ils aimeraient effectuer une transition vers du logiciel en tant que service.
+Kubernetes répond parfaitement aux besoins de l'entreprise dans la mesure où ils aimeraient effectuer une transition vers du logiciel en tant que service.
 L'équipe IT devra donc être en mesure de déployer rapidement de nouvelles versions peu importe la plateforme, assurer une haute disponibilité des services et passer à l'échelle, afin de répondre à la demande et limiter les coûts.
 
 Cependant Kubernetes nécessite d'apprendre de nombreux nouveaux concepts pour gérer convenablement une grappe.

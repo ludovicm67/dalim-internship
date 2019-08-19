@@ -13,4 +13,4 @@ Le sujet de mon stage est le déploiement d'une grappe Kubernetes.
 Une grappe étant un ensemble de machines virtuelles ou physiques.
 
 Ce rapport vous présentera dans un premier temps Dalim Software et les différentes personnes avec qui j’ai travaillé tout au long de mon stage.
-Je détaillerai ensuite ll'organisation du travail que j’ai réalisé en prenant soin d’expliquer le déroulement et les objectifs des principales tâches effectuées.
+Je détaillerai ensuite l'organisation du travail que j’ai réalisé en prenant soin d’expliquer le déroulement et les objectifs des principales tâches effectuées.
