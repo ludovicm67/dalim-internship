@@ -101,7 +101,7 @@ On a donc fait le choix d'utiliser CephFS pour les grappes internes.
 
 ### Mécanisme de surveillance et d'alerte
 
-Rancher offre la possibilité de déployer rapidement un mécanisme de surveillance et d'alerte reposant sur Prometheus, Alert-manager et Grafana.
+Rancher offre la possibilité de déployer rapidement un mécanisme de surveillance et d'alerte reposant sur Prometheus [@prometheus], Alertmanager [@alertmanager] et Grafana [@grafana].
 
 Un certain nombre de métriques sont déjà configurées par défaut, telles que le taux d'utilisation de processeur, de mémoire et de l'état de santé général de la grappe, mais il est toutefois possible d'exposer des métriques supplémentaires par des applications déployées.
 La figure \ref{fig_grafana} est une capture d'écran de la vue d'un tableau de bord de Grafana, montrant l'état de santé d'une grappe Kubernetes.
@@ -257,7 +257,7 @@ J'ai également supprimé l'instance et restauré, ce qui a parfaitement fonctio
 Mon stage n'étant pas encore terminé, certaines tâches sont encore en cours de réalisation.
 Notamment la réalisation d'une preuve de concept de traitement de fichiers PDF, où un utilisateur peut déposer des fichiers dans une interface web, et récupérer ses fichiers traités en sortie.
 
-La mise en production d'une partie des services existants sur une grappe EKS est également en cours.
+La mise en production d'une partie des services existants sur une grappe EKS [@eks] est également en cours.
 Melwin Kieffer est en train de déployer les différents services avec l'aide de la documentation que j'ai pu produire.
 J'interviens pour l'aider en cas de besoin.
 Cette méthode permet de transmettre la connaissance et de valider la documentation, le but étant que l'équipe IT soit en mesure de gérer pleinement toute l'infrastructure une fois mon stage terminé.
