@@ -1,0 +1,58 @@
+---
+# some basic informations about the document
+entity: Université de Strasbourg
+service: |
+  Cursus Master Ingénierie \
+  Informatique, Systèmes et Réseaux
+context: |
+  Stage de spécialisation de quatrième année \
+  Stage à l'étranger
+title: Rapport de stage
+author: Ludovic \textsc{Muller}
+date: 3 juin – 30 août 2019
+subject: Déploiement d'une grappe Kubernetes
+
+# supervisors
+supervisor1_title: Tuteur de stage
+supervisor1: |
+  Vincent \textsc{Demange} \
+  Directeur des systèmes d'information
+supervisor2_title: Rapporteur
+supervisor2: Pierre \textsc{David}
+
+# logos
+logo1: images/logos/unistra.png
+logo2: images/logos/dalim.png
+
+# format
+papersize: a4
+output: pdf_document
+documentclass: report
+classoption:
+ - onecolumn
+ - oneside
+ - article
+ - openany
+
+# bibliography
+bibliography: references.bib
+biblio-style: plain
+
+# language settings
+lang: fr
+biblio-title: Références
+subject_title: Sujet de stage
+author_title: Auteur
+
+# style settings
+numbersections: true
+line_numbers: false
+colorlinks: true
+toc-depth: 4
+geometry: "margin=3cm"
+
+# all tables
+toc: true # table of contents
+lot: false # list of tables
+lof: true # list of figures
+---

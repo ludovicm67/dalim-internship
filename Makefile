@@ -1,27 +1,24 @@
-# Useful variables:
-SCRIPTS = $(wildcard scripts/*.sh)
-REPORT_FILES = $(wildcard report/*)
+NAME := report
+INPUTS := report/meta.yaml \
+	report/1_introduction.md \
+	report/2_organisation.md \
+	report/3_travail.md \
+	report/4_conclusion.md
 
-# Build all targets (default)
-.PHONY: all
-all: pdf
-
-# Building the pdf file
-report.pdf: $(REPORT_FILES)
-	@./scripts/report.sh
-
-# Targets to call manually
 .PHONY: report
-report: report.pdf
+report: $(NAME).pdf
 
-.PHONY: pdf
-pdf: report
+%.pdf: %.tex
+	xelatex $*
+	yes | bibtex $*
+	xelatex $*
+	xelatex $*
+
+$(NAME).tex: $(INPUTS)
+	pandoc -s \
+		--template=report/template.tex \
+		--natbib -N -o $@ $(INPUTS)
 
 .PHONY: clean
 clean:
-	rm -f ./*.pdf
-
-# if needed…
-.PHONY: exec
-exec:
-	chmod +x $(SCRIPTS)
+	$(RM) $(NAME).*

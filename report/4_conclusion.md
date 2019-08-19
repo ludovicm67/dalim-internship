@@ -12,3 +12,6 @@ J'ai d'ailleurs eu l'occasion d'ouvrir certains rapports de bogue lors de mon st
 Durant ces trois mois, j'ai eu l'opportunité d'approfondir grandement mes compétences sur Kubernetes, un orchestrateur que j'avais déjà pu tester rapidement sans avoir le temps pour vraiment pousser pour maîtriser la majorité des concepts.
 
 Je pense que je vais laisser derrière moi au sein de Dalim Software une documentation très complète et qui s'avèrera très utile pour la maintenance des différentes grappes Kubernetes qui vont être déployées à terme.
+L'infrastructure informatique de l'entreprise sera désormais plus standard et maintenable.
+
+Je tiens à remercier chaleureusement Dalim Software et l'ensemble de son personnel pour m'avoir accueilli dans le but de pouvoir réaliser mon stage dans d'excellentes conditions, et pour m'avoir fait découvrir les fabuleux *Riesenschnitzel* du Alte Zunft, véritable pilier de la culture culinaire locale.
